@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:03:37 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/25 18:40:07 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:31:31 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 
 /* TODO
-	sub functions of ft_format
+	makefile that compile printf.c and launch make inside the libft
+	putptr
+	puthex
 */
 
 int	ft_format(va_list args, const char format)
@@ -31,10 +33,10 @@ int	ft_format(va_list args, const char format)
 		else if (format == 'd' || format == 'i')
 			len += ft_putnbr_fd(va_arg(args, int), 1);
 		/*else if (format == 'p')
-			len += ft_putptr(va_arg(args, unsigned long long));
+			len += ft_putptr(va_arg(args, unsigned long long));*/
 		else if (format == 'u')
-			len += ft_putunsigned(va_arg(args, unsigned int));
-		else if (format == 'x' || format == 'X')
+			len += ft_putnbr_fd(va_arg(args, unsigned int), 1);
+		/*else if (format == 'x' || format == 'X')
 			len += ft_puthex(va_arg(args, unsigned int));*/
 		return (len);
 }
@@ -67,6 +69,6 @@ int	ft_printf(const char *str, ...)
 
 int main()
 {
-	int len = ft_printf("|Test, %% %c %s %d|", 'x', "gpuscedd", 42);
+	int len = ft_printf("|Test, %% %c %s %d %u|", 'x', "gpuscedd", 2147483648, 2147483648);
 	ft_printf("	[%d]", len);
 }
