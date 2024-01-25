@@ -6,17 +6,16 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:03:37 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/25 19:31:31 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:42:23 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
 /* TODO
-	makefile that compile printf.c and launch make inside the libft
-	putptr
-	puthex
+	- makefile that compile printf.c and launch make inside the libft
+	- puthex - putnbr_base
+	- putptr - capire meglio
 */
 
 int	ft_format(va_list args, const char format)
@@ -33,11 +32,11 @@ int	ft_format(va_list args, const char format)
 		else if (format == 'd' || format == 'i')
 			len += ft_putnbr_fd(va_arg(args, int), 1);
 		/*else if (format == 'p')
-			len += ft_putptr(va_arg(args, unsigned long long));*/
+			len += ft_putptr(va_arg(args, &void *));*/
 		else if (format == 'u')
 			len += ft_putnbr_fd(va_arg(args, unsigned int), 1);
 		/*else if (format == 'x' || format == 'X')
-			len += ft_puthex(va_arg(args, unsigned int));*/
+			len += ft_putnbr_base(va_arg(args, unsigned int));*/
 		return (len);
 }
 
