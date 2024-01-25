@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:03:37 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/25 17:37:55 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:40:07 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,26 @@
 	sub functions of ft_format
 */
 
-void	ft_format(va_list args, const char format, int *len)
+int	ft_format(va_list args, const char format)
 {
+	int len;
+
+	len = 0;
 		if (format == '%')
-			len += ft_putchar('%');
-		/*else if (format == 'c')
-			len += ft_putchar(va_arg(args, int));
+			len += ft_putchar_fd('%', 1);
+		else if (format == 'c')
+			len += ft_putchar_fd(va_arg(args, int), 1);
 		else if (format == 's')
-			len += ft_putstr(va_arg(args, char *));
+			len += ft_putstr_fd(va_arg(args, char *), 1);
 		else if (format == 'd' || format == 'i')
-			len += ft_putnbr(va_arg(args, int));
-		else if (format == 'p')
+			len += ft_putnbr_fd(va_arg(args, int), 1);
+		/*else if (format == 'p')
 			len += ft_putptr(va_arg(args, unsigned long long));
 		else if (format == 'u')
 			len += ft_putunsigned(va_arg(args, unsigned int));
 		else if (format == 'x' || format == 'X')
 			len += ft_puthex(va_arg(args, unsigned int));*/
+		return (len);
 }
 
 int	ft_printf(const char *str, ...)
@@ -46,15 +50,23 @@ int	ft_printf(const char *str, ...)
 	{
 		if(*str == '%')
 		{
-			ft_format(args, *(str + 1), &len);
+			len += ft_format(args, *(++str));
 			str++;
 		}
 		else
 		{
-			len += ft_putchar(*str);
+			len += ft_putchar_fd(*str, 1);
 			str++;
 		}
 	}
 	va_end (args);
 	return (len);
+}
+
+#include <stdio.h>
+
+int main()
+{
+	int len = ft_printf("|Test, %% %c %s %d|", 'x', "gpuscedd", 42);
+	ft_printf("	[%d]", len);
 }
