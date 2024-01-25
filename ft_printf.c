@@ -6,11 +6,12 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:03:37 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/25 16:36:58 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:37:55 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include " "
+#include "libft.h"
+
 
 /* TODO
 	sub functions of ft_format
@@ -20,7 +21,7 @@ void	ft_format(va_list args, const char format, int *len)
 {
 		if (format == '%')
 			len += ft_putchar('%');
-		else if (format == 'c')
+		/*else if (format == 'c')
 			len += ft_putchar(va_arg(args, int));
 		else if (format == 's')
 			len += ft_putstr(va_arg(args, char *));
@@ -31,7 +32,7 @@ void	ft_format(va_list args, const char format, int *len)
 		else if (format == 'u')
 			len += ft_putunsigned(va_arg(args, unsigned int));
 		else if (format == 'x' || format == 'X')
-			len += ft_puthex(va_arg(args, unsigned int));
+			len += ft_puthex(va_arg(args, unsigned int));*/
 }
 
 int	ft_printf(const char *str, ...)
