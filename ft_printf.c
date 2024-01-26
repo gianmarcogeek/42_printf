@@ -13,7 +13,6 @@
 #include "libft.h"
 
 /* TODO
-	- makefile that compile printf.c and launch make inside the libft
 	- puthex - putnbr_base
 	- putptr - capire meglio
 */
