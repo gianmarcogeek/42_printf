@@ -6,12 +6,12 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:10:19 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 20:12:04 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:34:37 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <limits.h>
 # include <stddef.h>

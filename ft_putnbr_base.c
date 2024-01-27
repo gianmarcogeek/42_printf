@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 20:19:41 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 20:16:44 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:37:52 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	print_nbr(long long nbr, int base_val, char *symbols)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (nbr < 0)
@@ -22,22 +22,22 @@ static int	print_nbr(long long nbr, int base_val, char *symbols)
 		nbr = -nbr;
 		len += ft_putchar_fd('-', 1);
 	}
-	
 	if (nbr >= base_val)
-		len += print_nbr((nbr/base_val), base_val, symbols);
-	len += ft_putchar_fd(symbols[nbr%base_val], 1);
+		len += print_nbr((nbr / base_val), base_val, symbols);
+	len += ft_putchar_fd(symbols[nbr % base_val], 1);
 	return (len);
 }
+
 static int	double_char(char *symbols)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
-	while(symbols[i])
+	while (symbols[i])
 	{
 		j = i + 1;
-		while(symbols[j])
+		while (symbols[j])
 		{
 			if (symbols[i] == symbols[j])
 				return (1);
@@ -50,14 +50,14 @@ static int	double_char(char *symbols)
 
 int	ft_putnbr_base(long long nbr, char *base)
 {
-	int base_val;
+	int	base_val;
 	int	len;
-	
+
 	base_val = 0;
 	len = 0;
-	while(base[base_val])
+	while (base[base_val])
 	{
-		if(base[base_val] == '+' || base[base_val] == '-')
+		if (base[base_val] == '+' || base[base_val] == '-')
 			return (0);
 		++base_val;
 	}
@@ -68,4 +68,3 @@ int	ft_putnbr_base(long long nbr, char *base)
 	len += print_nbr(nbr, base_val, base);
 	return (len);
 }
-

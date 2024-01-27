@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:03:37 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 20:28:17 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:33:33 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,16 +61,3 @@ int	ft_printf(const char *str, ...)
 	va_end (args);
 	return (len);
 }
-
-#include <stdio.h>
-
-/*int main()
-{
-	int x = 0;
-	
-	int len = ft_printf("|Test, %d %u %x %p %p|", -1, 2147483, 53423423, 0, 0);
-	ft_printf("	[%d]", len);
-
-	int len2 = printf("|Test, %d %u %x %p %p|", -1, 2147483, 53423423, 0, 0);
-	printf("	[%d]", len2);
-}*/
