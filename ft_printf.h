@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:10:19 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 17:23:11 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:12:04 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 int		ft_putchar_fd(char c, int fd);
 int		ft_putstr_fd(char *s, int fd);
 int		ft_putnbr_fd(long long n, int fd);
-int		ft_putnbr_base(long nbr, char *base);
+int		ft_putnbr_base(long long nbr, char *base);
+int		ft_putptr(unsigned long long address);
 int		ft_printf(const char *str, ...);
 
 #endif

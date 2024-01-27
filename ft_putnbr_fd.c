@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:25:34 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 17:38:18 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:12:38 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_putnbr_fd(long long n, int fd)
 	{
 		if (n > 9)
 			len += ft_putnbr_fd(n / 10, fd);
-		len += ft_putchar_fd(n % 10 + '0', fd);
+		len += ft_putchar_fd((n % 10) + '0', fd);
 	}
 	return (len);
 }

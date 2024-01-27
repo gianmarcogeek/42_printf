@@ -6,7 +6,7 @@
 #    By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 12:27:35 by gpuscedd          #+#    #+#              #
-#    Updated: 2024/01/27 17:27:03 by gpuscedd         ###   ########.fr        #
+#    Updated: 2024/01/27 20:15:09 by gpuscedd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS			=	ft_putchar_fd.c ft_putnbr_fd.c \
 					ft_putstr_fd.c ft_putnbr_base.c \
-					ft_printf.c
+					ft_printf.c ft_putptr.c
 
 OBJS = $(SRCS:.c=.o)
 
