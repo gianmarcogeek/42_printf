@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 20:19:41 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 20:42:06 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:25:36 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ int	ft_putptr(unsigned long long address)
 	base_val = 0;
 	len = 0;
 	if (address == 0)
-	{
-		len += ft_putstr_fd("(nil)", 1);
-		return (len);
-	}
+		len += (ft_putstr_fd(NIL_STRING, 1));
 	len += ft_putstr_fd("0x", 1);
 	while (base[base_val])
 	{
