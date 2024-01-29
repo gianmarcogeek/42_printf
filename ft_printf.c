@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:03:37 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 20:33:33 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/29 12:44:26 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ static int	ft_format(va_list args, const char format)
 	else if (format == 'd' || format == 'i')
 		len += ft_putnbr_fd(va_arg(args, int), 1);
 	else if (format == 'p')
-	{
 		len += ft_putptr(va_arg(args, unsigned long long));
-	}
 	else if (format == 'u')
 		len += ft_putnbr_fd(va_arg(args, unsigned int), 1);
 	else if (format == 'X')

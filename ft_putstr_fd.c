@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:20:48 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/27 20:38:36 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/01/29 12:46:53 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ int	ft_putstr_fd(char *s, int fd)
 		}
 	}
 	else
-	{
 		len += ft_putstr_fd("(null)", 1);
-	}
 	return (len);
 }
