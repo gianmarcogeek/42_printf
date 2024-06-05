@@ -6,7 +6,7 @@
 /*   By: gpuscedd <gpuscedd@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:10:19 by gpuscedd          #+#    #+#             */
-/*   Updated: 2024/01/29 15:25:18 by gpuscedd         ###   ########.fr       */
+/*   Updated: 2024/06/05 11:56:49 by gpuscedd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 # include <stdarg.h>
 
 # ifdef __APPLE__
-# define NIL_STRING "0x0"
+#  define NIL_STRING "0x0"
 # endif
 # ifdef __unix__
-# define NIL_STRING "(nil)"
+#  define NIL_STRING "(nil)"
 # endif
 
 int		ft_putchar_fd(char c, int fd);
