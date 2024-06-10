@@ -4,6 +4,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 #text style
+BOLD = \033[1m
 GREEN = \033[92m
 RESET = \033[0m
 
@@ -15,7 +16,7 @@ OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
-	@echo "$(GREEN)$(NAME) created successfully!$(RESET)"
+	@echo "$(BOLD)$(GREEN)$(NAME) created successfully!$(RESET)"
 
 %.o : %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< 
